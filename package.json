@@ -1,0 +1,13 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node consola.js",
+    "electron": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^10.1.3"
+  }
+}
