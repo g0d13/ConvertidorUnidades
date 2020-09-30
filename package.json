@@ -1,13 +1,17 @@
 {
   "name": "javascript",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "desktop/main.js",
   "license": "MIT",
   "scripts": {
     "console": "node ./console/consola.js",
-    "electron": "electron ./desktop/main.js"
+    "electron": "electron-forge start ./desktop/main.js"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.53",
     "electron": "^10.1.3"
   }
 }

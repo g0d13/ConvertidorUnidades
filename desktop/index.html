@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>popocita</title>
     <!-- CSS only -->
@@ -11,11 +12,12 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <script defer src="./render.js"></script>
   </head>
   <body>
     <header>
       <!-- As a link -->
-      <nav class="navbar navbar-dark bg-dark  d-flex">
+      <nav class="navbar navbar-dark bg-dark d-flex">
         <a class="navbar-brand" href="#">Irse a la popis</a>
         <a class="navbar-brand" href="#">Venir de la popis</a>
       </nav>
@@ -35,43 +37,18 @@
             <input type="text" class="form-control" id="inputNumero1" />
           </div>
           <div class="form-group">
-            <label for="exampleFormControlInput1">M</label>
-            <input type="text" class="form-control" id="inputNumero2" />
+            <input
+              type="button"
+              class="btn btn-primary btn-block"
+              id="btnConvertir"
+              value="Calcular"
+            />
           </div>
-          <div class="form-group">
-            <button class="btn btn-primary btn-block" id="btnConvertir">Convertir</button>
-          </div>
-          <div class="jumbotron">El estupido resultado es</div>
+          <div class="jumbotron" id="resultado"></div>
         </form>
       </section>
     </main>
-    <!-- JS, Popper.js, and jQuery -->
-    <script
-      defer
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      defer
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-    <script src="lib/Convertidor.js"></script>
-    <script>
-      const conv = new ConvertirdorUnidades(23, 'M');
-      const selectOp = document.querySelector("#selectorUnits")
-      const btnConvertir = document.querySelector("#btnConvertir")
-      btnConvertir.addEventListener('click', () => {
-        console.log({selectOp})
-      })
-    </script>
+    <!-- Scripts -->
+    <script src="../lib/Convertidor.js"></script>
   </body>
 </html>
