@@ -4,8 +4,8 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "node consola.js",
-    "electron": "electron ."
+    "console": "node ./console/consola.js",
+    "electron": "electron ./desktop/main.js"
   },
   "devDependencies": {
     "electron": "^10.1.3"

@@ -1,5 +1,5 @@
 const readline = require("readline");
-const ConvertirdorUnidades = require("./lib/Convertidor");
+const ConvertirdorUnidades = require("../lib/Convertidor");
 
 const rl = readline.createInterface({
   input: process.stdin,
