@@ -4,7 +4,7 @@ const ConvertirdorUnidades = require("../lib/Convertidor");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: "desktop" });
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.get("/:cantidad/:unidad", (req, res) => {
