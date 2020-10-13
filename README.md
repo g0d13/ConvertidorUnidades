@@ -25,7 +25,7 @@ Para iniciar la version web
 
 ```bash
 
-npm run
+npm run web
 
 ```
 
@@ -33,3 +33,5 @@ npm run
 
 Para iniciar el formulario
 <code> abrir el archivo manualmente en la carpeta formulario<code/>
+
+
