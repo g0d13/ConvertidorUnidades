@@ -28,7 +28,7 @@ app.once("ready", () => {
     })
   );
 
-  // Show window when page is ready
+  // Evento para mostrar la ventana cuando este lista.
   window.once("ready-to-show", () => {
     window.show();
   });

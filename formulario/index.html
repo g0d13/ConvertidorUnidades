@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>popocita</title>
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script defer src="./render.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- As a link -->
+      <nav class="navbar navbar-dark bg-dark d-flex">
+        <a class="navbar-brand" href="#">Hola amigos</a>
+        <a class="navbar-brand" href="#">TEC</a>
+      </nav>
+    </header>
+    <main class="d-flex justify-content-center">
+      <section class="">
+        <h1>Convertir</h1>
+        <form>
+          <div class="form-group">
+            <select class="form-control" id="selectorUnits">
+              <option value="0">CM a M</option>
+              <option value="1">M a CM</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">CM</label>
+            <input type="text" class="form-control" id="inputNumero1" />
+          </div>
+          <div class="form-group">
+            <input
+              type="button"
+              class="btn btn-primary btn-block"
+              id="btnConvertir"
+              value="Calcular"
+            />
+          </div>
+          <div class="jumbotron" id="resultado"></div>
+        </form>
+      </section>
+    </main>
+    <script src="../lib/Convertidor.js"></script>
+    <!-- Scripts -->
+    <script id="web_service">
+      const input1 = document.querySelector("#inputNumero1");
+      const selectOp = document.querySelector("#selectorUnits");
+      const btnConvertir = document.querySelector("#btnConvertir");
+      const resultado = document.querySelector("#resultado");
+
+      btnConvertir.addEventListener("click", () => {
+        let option = selectOp.selectedIndex;
+        let unidad = option == 0 ? "M" : "CM";
+        let valor1 = input1.value;
+
+        const convertidor = new ConvertirdorUnidades(valor1, unidad);
+        resultado.innerText = convertidor.convertir();
+        return false;
+      });
+    </script>
+  </body>
+</html>
