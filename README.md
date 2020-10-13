@@ -1,6 +1,6 @@
 # ConvertidorUnidades
 
-Para iniciar la version de consola
+## Consola 🖥
 
 ```bash
 
@@ -8,13 +8,18 @@ npm run console
 
 ```
 
-Para iniciar la version escritorio
+## Escritorio 🈸
+
+Para iniciar la version escritorio se necesita iniciar el servivicio web.
+Ya que consume la misma API
 
 ```bash
 
 npm run electron
 
 ```
+
+## Web 🕸
 
 Para iniciar la version web
 
@@ -23,6 +28,8 @@ Para iniciar la version web
 npm run
 
 ```
+
+## Formulario 🙊
 
 Para iniciar el formulario
 <code> abrir el archivo manualmente en la carpeta formulario<code/>
