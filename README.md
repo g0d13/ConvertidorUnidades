@@ -1,5 +1,13 @@
 # ConvertidorUnidades
 
+Antes que nada
+
+```bash
+
+npm install
+
+```
+
 ## Consola 🖥
 
 ```bash
