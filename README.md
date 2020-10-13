@@ -18,8 +18,7 @@ npm run console
 
 ## Escritorio 🈸
 
-Para iniciar la version escritorio se necesita iniciar el servivicio web.
-Ya que consume la misma API
+Para iniciar la version escritorio
 
 ```bash
 

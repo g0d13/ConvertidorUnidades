@@ -49,19 +49,7 @@
       </section>
     </main>
     <!-- Scripts -->
-    <script id="web_service">
-      const input1 = document.querySelector("#inputNumero1");
-      const selectOp = document.querySelector("#selectorUnits");
-      const btnConvertir = document.querySelector("#btnConvertir");
-      const resultado = document.querySelector("#resultado");
-      btnConvertir.addEventListener("click", async () => {
-        let option = selectOp.selectedIndex;
-        let unidad = option == 0 ? "M" : "CM";
-        let valor1 = input1.value;
-        let response = await fetch(`/${valor1}/${unidad}`).then(response => response.json())
-        resultado.innerText = response.value
-        return false;
-      });
-      </script>
+    <script src="../lib/Convertidor.js"></script>
+    <script src="render.js"></script>
   </body>
 </html>
